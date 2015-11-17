@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+    <script>
+        var jsonData;
+        $(document).ready(function () {
+		  getTheData();
+        });
+
+        function getTheData() {
+            //live server call
+            $.ajax({
+                url: "GetJson.aspx",
+                success: function (result) {
+                    var j = JSON.parse(result);
+                    //returns object with 4 records
+                    console.log(j);
+                    jsonData = j;
+                    loadtable();
+                }
+            });
+        }
+
+
+        //this returned as undefined
+
+        function loadtable() {
+
+
+
+            $('#table').DataTable({
+                "data": jsonData,
+                "columns": [
+            { data: "benefits", title: "Benefits" },
+            { data: "limit", title: "Limit" },
+            { data: "amount", title: "Amount Accumulated" }
+                ],
+                "paging": false,
+                "ordering": true,
+                "info": false,
+                "searching": false
+            });
+
+        }
+
+    </script>
+</head>
+<body>
+    <table id="table" class="display" width="100%"> 
+</table>
+</body>
+</html>
