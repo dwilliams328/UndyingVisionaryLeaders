@@ -1,31 +1,93 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <title></title>
+	<meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link type="text/css" rel="stylesheet" href="Eligibility.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
+    
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    <link type="text/css" rel="stylesheet" href="Eligibility.css" />
-    </head>
+    
+    <script>
+        var jsonData;
+        $(document).ready(function () {
+		  getTheData();
+        });
 
-        <body>
-            <i class="fa fa-2x fa-bars"></i>
-            <a id="LO" style="background-color: #1c75bb" href="#" class="btn btn-default btn-sm">Logout</a>
-            <h2><strong>Patient Information</strong></h2>
-            <hr id="line">
-            <p>Patient Name: </p>
-            <p>Date of Birth: </p>
-            <p>Subscriber Name: </p>
-            <p>Relationship to Subscriber: </p>
+        function getTheData() {
+            //live server call
+            $.ajax({
+                url: "GetJson.aspx",
+                success: function (result) {
 
-            <h3>Plan Information</h3>
-            <hr>
-            <p>Plan information as of</p>
-            <p>Eligibility Status: </p>
-            <p>Plan: </p>
-            <p>Plan Document: </p>
-            <p>Co-Pay Amount: </p>
-            <p>Coverage is: </p>
-            <p>PPO Network: </p>
-            <p>Pre-Certification Number: </p>
+                    var j = JSON.parse(result);
+                    //returns object with 4 records
+                    //console.log(j);
+                    jsonData = j;
+                    loadtable();
+                }
+            });
+        }
 
-        </body>
-        </html>
+
+        //this returned as undefined
+
+        function loadtable() {
+            console.log(jsonData);
+            $("#Member_name").html(jsonData.Records[0].Member_name);
+            $("#HasMedical").html(jsonData.Records[0].HasMedical);
+            $("#Plan_Code").html(jsonData.Records[0].Plan_Code);
+            $("#DOB").html(jsonData.Records[0].DOB);
+            $("#Subscriber_Name").html(jsonData.Records[0].Subscriber_Name);
+            $("#Relationship_To_Subscriber").html(jsonData.Records[0].Relationship_To_Subscriber);
+            $("#H_Plan").html(jsonData.Records[0].H_Plan);
+            $("#TeamCare").html(jsonData.Records[0].TeamCare);
+            $("#Coverage").html(jsonData.Records[0].Coverage);
+            $("#PPO_Network").html(jsonData.Records[0].PPO_Network);
+            $("#Pre_Certification_Number").html(jsonData.Records[0].Pre_Certification_Number);
+
+
+            //$('#table').DataTable({
+            //    "data": jsonData.Records,
+            //    "columns": [
+            //{ data: "benefits", title: "Benefits" },
+            //{ data: "limit", title: "Limit" },
+            //{ data: "amount", title: "Amount Accumulated" }
+             //   ],
+             //   "paging": false,
+             //   "ordering": true,
+             //   "info": false,
+             //   "searching": false
+            //});
+
+        }
+//table-row display headers vertically
+    </script>
+</head>
+<body>
+    <img src="reg-logo-200x50.png" />
+    <a id="LO" style="background-color: #1c75bb" href="#" class="btn btn-default btn-md">Logout</a>
+    <h2 style="color: #00a651"><strong>Patient Information</strong></h2>
+    <hr id="line">
+    <div class="profilelabel">Member Name:</div><div class="placement" id="Member_name"></div>
+    <div class="profilelabel">Date of Birth:</div><div class="placement" id="DOB"></div>
+    <div class="profilelabel">Relationship To Subscriber:</div><div  class="placement" id="Relationship_To_Subscriber"></div>
+    <h3 style="color:#00a651">Plan Information</h3>
+    <hr>
+    <p>Plan information as of: 11/12/15</p>
+    <div class="profilelabel">Has Medical:</div><div class="placement" id="HasMedical"></div>
+    <div class="profilelabel">Plan Code:</div><div class="placement" id="Plan_Code"></div>
+    <div class="profilelabel">H Plan:</div><div class="placement" id="H_Plan"></div>
+    <div class="profilelabel">TeamCare:</div><div class="placement" id="TeamCare"></div>
+    <div class="profilelabel">Coverage:</div><div class="placement" id="Coverage"></div>
+    <div class="profilelabel">PPO NetWork:</div><div class="placement" id="PPO_Network"></div>
+    <div class="profilelabel">Pre-Certification Number:</div><div class="placement" id="Pre_Certification_Number"></div>
+
+    
+</body>
+</html>
+

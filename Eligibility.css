@@ -1,15 +1,8 @@
-﻿h2{
-	color: green;
-}
-h3{
-	color: green;
-}
+﻿
 a{
 	float: right; background-color: #1c75bb;
 }
-i{
-	color: #1c75bb;
-}
+
 #LO{
 	color: white;
 }
@@ -19,4 +12,9 @@ hr{
 #line{
 	border-width: 2px;
 	border-color: #000000;
+}
+.placement{
+    color:red;
+    margin-left: 200px;
+    margin-top: -20px;  
 }
