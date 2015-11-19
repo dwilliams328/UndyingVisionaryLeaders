@@ -1,0 +1,16 @@
+﻿fieldset{
+    background-color:#f5f5f5;
+}
+#Logout{
+    float:right;
+    color:white;
+    background-color:#1c75bb;
+
+}
+.navbar-toggle{
+    float:left;
+}
+.navbar-fixed-bottom, .navbar-fixed-top{
+    position:absolute;
+}
+

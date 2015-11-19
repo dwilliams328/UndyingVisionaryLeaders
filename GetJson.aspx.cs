@@ -17,7 +17,9 @@ namespace David
         {
             
             string connectionString = ConfigurationManager.ConnectionStrings["David2"].ConnectionString;
-            string queryString = "SELECT e.HasMedical, e.[Plan code], m.FirstName, m.LastName, m.DOB, m.[RelationshipTo Subscriber], m.[Subscriber Name], e.hplan, e.EligibilityStatus, e.teamcare, e.coverage, e.[PPO Network], e.[Pre-CertificationNumber] FROM Members AS m, Eligibility AS e WHERE e.EligibilityID = m.EligibilityID AND m.id = 1";
+            string memberid = "1";
+            //string memberid = Request.Form("memberid");
+            string queryString = String.Format("SELECT e.HasMedical, e.[Plan code], m.FirstName, m.LastName, m.DOB, m.[RelationshipTo Subscriber], m.[Subscriber Name], e.hplan, e.EligibilityStatus, e.teamcare, e.coverage, e.[PPO Network], e.[Pre-CertificationNumber] FROM Members AS m, Eligibility AS e WHERE e.EligibilityID = m.EligibilityID AND m.id = '{0}'", memberid);
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 SqlCommand command = new SqlCommand(queryString, connection);
