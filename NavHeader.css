@@ -1,0 +1,6 @@
+﻿.navbar-toggle{
+    float:left;
+}
+.navbar-fixed-bottom, .navbar-fixed-top{
+    position:absolute;
+}
