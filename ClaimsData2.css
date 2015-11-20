@@ -1,5 +1,6 @@
 ﻿h2{
-    color:red;
+    color:#00a651;
+    
 }
 .navbar-toggle{
     float:left;
@@ -12,4 +13,19 @@
     color:white;
     background-color:#1c75bb;
 
+}
+h3{
+    color:#00a651;
+    margin-left:100px;
+    font-size:32px;
+}
+.placement{
+    color:red;
+    margin-left: 200px;
+    margin-top: -40px;  
+}
+
+p{
+    margin:10px;
+    padding:10px;
 }

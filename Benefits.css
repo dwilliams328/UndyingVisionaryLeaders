@@ -1,4 +1,4 @@
-﻿h1{
+﻿/*h1{
 	color: green;
 }
 div.columns{
@@ -23,4 +23,31 @@ hr{
 #line{
 	border-width: 2px;
 	border-color: #000000;
+}*/
+.navbar-toggle{
+    float:left;
 }
+.navbar-fixed-bottom, .navbar-fixed-top{
+    position:absolute;
+}
+#Logout{
+    float:right;
+    color:white;
+    background-color:#1c75bb;
+
+}
+h3{
+    color:#00a651;
+    font-size:32px;
+    margin-left:100px;
+
+}
+table{
+    margin-top:45px;
+    color:red;  
+}
+
+.red{
+    color:red;
+}
+

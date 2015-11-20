@@ -19,3 +19,6 @@ input[type=submit].btn-block {
     width: 100%;
     margin-top: 25px;
 }
+a:link{
+    text-decoration:none;
+}

@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="benefits.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
     <style>
         td, th {
             padding:12px;
@@ -17,15 +18,39 @@
 }
      
     </style>
+
 </head>
 
 <body>
+    <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+        <a class="navmenu-brand" href="#"><img src="reg-logo-200x50.png" /></a>
+        <ul class="nav navmenu-nav">
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="eligibility.html">Eligibility</a></li>
+            <li class="active"><a href="Benefits.html">Benefits</a></li>
+            <li><a href="SearchClaims.html">Claims</a></li>
+            <li><a href="BasicInfo.html">Basic Info</a></li>
+            <li><a href="dental.html">Dental</a></li>
+            <li><a href="https://myteamcare.org/mobile/mobile_faqs.aspx">FAQs</a></li>
+            <li><a href="Memberid.html">Other Patients</a></li>
+            
+        </ul>
+    </nav>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="Index.html"> <div id="Logout" style="background-color: #1c75bb" href="Index.html" class="btn btn-default btn-xs">Logout</div></a>
+        <h3>Benefits and Accumulators</h3>
 
+    </div>
 
     <div class="container-fluid">
     <i class="fa fa-2x fa-bars"></i>
     <a id="Logout" style="background-color: #1c75bb" href="Index.html" class="btn btn-default btn-xs">Logout</a>
-    <h1><strong>Benefits and Accumulators</strong></h1>
+    <h1><strong></strong></h1>
     <hr id="line">
     <div class="columns">
        
@@ -40,13 +65,49 @@
 
                         <tr>
                             <td>
-                                Hello David
+                                Annual Medical Deducatible (IND)
                             </td>
-                            <td>
-                                David
+                            <td class="red">
+                                $1,500
                             </td>
+                            <td class="red">
+                                $950
+                            </td>
+
+                        </tr>
+                        <tr>
                             <td>
-                                Blah blah
+                                Annual Medical Deducatible (Family)
+                            </td>
+                            <td class="red">
+                                $2,500
+                            </td>
+                            <td class="red">
+                                $1,800
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                Annual Major Medical Out-Of-Pocket Expense Limit (IND)
+                            </td>
+                            <td class="red">
+                                $3,500
+                            </td>
+                            <td class="red">
+                                $2,300
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                Annual Major Medical Out-Of-Pocket Expense Limit (Family)
+                            </td>
+                            <td class="red">
+                                $4,261
+                            </td>
+                            <td class="red">
+                                $3,154
                             </td>
 
                         </tr>
@@ -57,6 +118,9 @@
             </div>
         </div>
         </div>
-       
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
 </body>
 </html>

@@ -4,14 +4,15 @@
     <title></title>
 	<meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link type="text/css" rel="stylesheet" href="Eligibility.css" />
+    
     <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
     <script src="https://cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.10/css/jquery.dataTables.min.css">
     
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
-    
+    <link type="text/css" rel="stylesheet" href="Eligibility.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
     <script>
         var jsonData;
         $(document).ready(function () {
@@ -68,19 +69,37 @@
     </script>
 </head>
 <body>
-    <div id="HeaderBackground">
-        <img src="reg-logo-200x50.png" />
-        <a id="LO" style="background-color: #1c75bb" href="Index.html" class="btn btn-default btn-md">Logout</a>
-        <h1 id="Eligibility">Eligibility</h1>
+    <nav id="myNavmenu" class="navmenu navmenu-default navmenu-fixed-left offcanvas" role="navigation">
+        <a class="navmenu-brand" href="#"><img src="reg-logo-200x50.png" /></a>
+        <ul class="nav navmenu-nav">
+            <li><a href="Home.html">Home</a></li>
+            <li class="active"><a href="eligibility.html">Eligibility</a></liclass="active">
+            <li><a href="Benefits.html">Benefits</a></li>
+            <li><a href="SearchClaims.html">Claims</a></li>
+            <li><a href="BasicInfo.html">Basic Info</a></li>
+            <li><a href="dental.html">Dental</a></li>
+            <li><a href="https://myteamcare.org/mobile/mobile_faqs.aspx">FAQs</a></li>
+            <li><a href="Memberid.html">Other Patients</a></li>
+        </ul>
+    </nav>
+    <div class="navbar navbar-default navbar-fixed-top">
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#myNavmenu" data-canvas="body">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="Index.html"> <div id="Logout" style="background-color: #1c75bb" href="Index.html" class="btn btn-default btn-md">Logout</div></a>
+        <h3 id="Eligibility">Eligibility</h3>
     </div>
+    
     <hr id="line">
-    <h2 style="color: #00a651"><strong>Patient Information</strong></h2>
+    <h2 id="Patient"><strong>Patient Information</strong></h2>
     <div class="profilelabel">Member Name:</div><div class="placement" id="Member_name"></div>
     <div class="profilelabel">Date of Birth:</div><div class="placement" id="DOB"></div>
     <div class="profilelabel">Relationship To Subscriber:</div><div  class="placement" id="Relationship_To_Subscriber"></div>
-    <h3 style="color:#00a651">Plan Information</h3>
+    <h3 id="Plan">Plan Information</h3>
     <hr>
-    <p>Plan information as of: 11/12/15</p>
+    <p><strong>Plan information as of:</strong> 11/12/15</p>
     <div class="profilelabel">Has Medical:</div><div class="placement" id="HasMedical"></div>
     <div class="profilelabel">Plan Code:</div><div class="placement" id="Plan_Code"></div>
     <div class="profilelabel">H Plan:</div><div class="placement" id="H_Plan"></div>
@@ -89,7 +108,10 @@
     <div class="profilelabel">PPO NetWork:</div><div class="placement" id="PPO_Network"></div>
     <div class="profilelabel">Pre-Certification Number:</div><div class="placement" id="Pre_Certification_Number"></div>
 
-    
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script> 
 </body>
 </html>
 

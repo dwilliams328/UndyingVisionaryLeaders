@@ -1,7 +1,4 @@
-﻿#Logout{
-    float:right;
-    color:black;
-}
+﻿
 #Provider{
     font-size: 24px;
     color: white;
@@ -12,6 +9,12 @@ padding:15px 5px;
 margin-top:10px;
 
 
+
+}
+#Logout{
+    float:right;
+    color:white;
+    background-color:#1c75bb;
 
 }
 #Eligibility{

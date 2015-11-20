@@ -1,12 +1,9 @@
 ﻿
-a{
+/*a{
 	float: right;
      background-color: #1c75bb;
 }
 
-#LO{
-	color: white;
-}
 hr{
 	margin: -10px;
 }
@@ -19,11 +16,38 @@ hr{
     color: red;
     
 }
+
+#HeaderBackground{
+    background-color:#f5f5f5;
+}*/
+#Eligibility{
+    color: #00a651;
+    font-size:32px;
+    margin-left:100px;
+
+    
+}
+#Logout{
+    float:right;
+    color:white;
+    background-color:#1c75bb;
+
+}
+.navbar-toggle{
+    float:left;
+}
+.navbar-fixed-bottom, .navbar-fixed-top{
+    position:absolute;
+}
 .placement{
     color:red;
     margin-left: 200px;
     margin-top: -20px;  
 }
-#HeaderBackground{
-    background-color:#f5f5f5;
+#Patient{
+    color:#00a651;
+    margin-top:45px;
+}
+#Plan{
+    color:#00a651;
 }
