@@ -1,0 +1,15 @@
+﻿h2{
+    color:red;
+}
+.navbar-toggle{
+    float:left;
+}
+.navbar-fixed-bottom, .navbar-fixed-top{
+    position:absolute;
+}
+#Logout{
+    float:right;
+    color:white;
+    background-color:#1c75bb;
+
+}

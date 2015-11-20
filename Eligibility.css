@@ -1,6 +1,7 @@
 ﻿
 a{
-	float: right; background-color: #1c75bb;
+	float: right;
+     background-color: #1c75bb;
 }
 
 #LO{
@@ -14,11 +15,15 @@ hr{
 	border-color: #000000;
     margin-top:-3px;
 }
+#Eligibility{
+    color: red;
+    
+}
 .placement{
     color:red;
     margin-left: 200px;
     margin-top: -20px;  
 }
-fieldset{
+#HeaderBackground{
     background-color:#f5f5f5;
 }

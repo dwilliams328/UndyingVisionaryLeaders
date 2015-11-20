@@ -13,4 +13,7 @@
 .navbar-fixed-bottom, .navbar-fixed-top{
     position:absolute;
 }
+h3{
+    color:red;
+}
 
